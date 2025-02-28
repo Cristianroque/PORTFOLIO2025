@@ -6,44 +6,52 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;
 }
-body{
+
+body {
     position: relative;
+    height: 500vh;
+    overflow-x: hidden;
 }
 
 /*-----MOBILE-------*/
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
+    position: fixed;
     width: 100%;
+    z-index: 1;
+    background-color: white;
 }
-li{
+
+li {
     list-style: none;
     margin: 10%;
     cursor: pointer;
     position: relative;
 }
-#xHeader{
-    width: 10%;
+
+#xHeader {
+    width: 7%;
     cursor: pointer;
+    position: absolute;
+    right: 10%;
 }
-#headerLinks{
+
+#headerLinks {
     display: block;
-    opacity: 0%;
     position: absolute;
     top: 0;
     right: 0;
     height: 100vh;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
     background-color: white;
     padding: 5%;
     border: 0.5px solid rgb(174, 174, 174);
@@ -51,21 +59,43 @@ li{
     border-bottom: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 40%;
-    transition: all 0.4s;
+    transition: all 0.5s ease-in;
+    transform: translateX(500px);
 }
-.imgHeader{
+
+.imgHeader {
     display: flex;
     padding: 3%;
     cursor: pointer;
 }
-.imgHeader svg{
+
+.imgHeader svg {
     width: 10%;
 }
-#logo{
+
+#logo {
     width: 10vw;
 }
 
-#options{
+#options {
     width: 4vw;
     cursor: pointer;
+}
+
+/*-----------SCRIPT------------*/
+
+@keyframes aparecer {
+
+    to {
+        transform: translateX(5px);
+    }
+
+}
+
+@keyframes sumir {
+
+    to {
+        transform: translateX(5px);
+    }
+
 }

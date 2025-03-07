@@ -9,93 +9,167 @@
 
 body {
     position: relative;
-    height: 500vh;
     overflow-x: hidden;
 }
-
-/*-----MOBILE-------*/
 
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 5%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
     width: 100%;
-    z-index: 1;
     background-color: white;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+}
+
+ul {
+    display: flex;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 li {
     list-style: none;
-    margin: 10%;
     cursor: pointer;
     position: relative;
 }
 
-#xHeader {
-    width: 7%;
-    cursor: pointer;
-    position: absolute;
-    right: 10%;
+li a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
-#headerLinks {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    background-color: white;
-    z-index: 2;
+.elementsList {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    width: 50%;
+}
+
+.boxBTN {
+    width: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    background-color: white;
-    padding: 5%;
-    border: 0.5px solid rgb(174, 174, 174);
-    border-top: none;
-    border-bottom: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    transition: all 0.5s ease-in;
-    transform: translateX(500px);
 }
 
-.imgHeader {
-    display: flex;
-    padding: 3%;
+#btnHeader {
+    background-color: transparent;
+    border: 1.5px solid #5E3BEE;
+    border-radius: 5px;
+    padding: 2%;
+    color: #5E3BEE;
+    width: 20%;
     cursor: pointer;
-}
-
-.imgHeader svg {
-    width: 10%;
 }
 
 #logo {
-    width: 10vw;
+    width: 12%;
 }
 
-#options {
-    width: 4vw;
-    cursor: pointer;
+.divIMG {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroPage {
+    width: 100%;
+    height: 92vh;
+    background-color: #F5FCFF;
+    display: flex;
+}
+
+#textHero {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textHeroBox {
+    width: 80%;
+    height: 36vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textHeroBox p {
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.textHeroBox h2 {
+    font-size: 2.8rem;
+}
+
+#imgHero {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Skills {
+    width: 100%;
+    height: 80vh;
+}
+
+#TitleSkills {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5%;
+    font-size: 2.5rem;
+}
+#boxSkils{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.SkillsItem{
+    background-color: #F5FCFF;
+    width: 25%;
+    height: 55%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 6%;
+}
+
+.SkillsItem img{
+    margin: 0;
+}
+
+#aboutMe{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+.aboutMeBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*-----------SCRIPT------------*/
-
-@keyframes aparecer {
-
-    to {
-        transform: translateX(5px);
-    }
-
-}
-
-@keyframes sumir {
-
-    to {
-        transform: translateX(5px);
-    }
-
-}

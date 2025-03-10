@@ -70,9 +70,15 @@ li a {
     transition: 0.5s all;
 }
 
-#btnHeader:hover{
+#btnHeader:hover {
     background-color: #5E3BEE;
     color: white;
+}
+
+#logoLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #logo {
@@ -91,6 +97,11 @@ li a {
     height: 100vh;
     background-color: #F5FCFF;
     display: flex;
+}
+
+#heroIMG {
+    animation: mover 10s infinite;
+    transition: all 2s;
 }
 
 #textHero {
@@ -237,7 +248,8 @@ li a {
     height: 60%;
     position: relative;
 }
-.imgProject img{
+
+.imgProject img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -255,7 +267,7 @@ li a {
     gap: 6%;
 }
 
-.textProject button{
+.textProject button {
     border-bottom: #5E3BEE 2px solid;
     border-top: none;
     border-left: none;
@@ -263,14 +275,15 @@ li a {
     background-color: transparent;
     cursor: pointer;
 }
+
 .textProject a {
     text-decoration: none;
     color: black;
 }
 
-#Footer{
+#Footer {
     width: 100%;
-    height: 25vh;
+    height: 20vh;
     background-color: #F5FCFF;
     display: flex;
     flex-direction: column;
@@ -278,7 +291,7 @@ li a {
     justify-content: center;
 }
 
-.topFooter{
+.topFooter {
     width: 100%;
     height: 50%;
     display: flex;
@@ -286,12 +299,14 @@ li a {
     justify-content: space-between;
     margin: 2%;
 }
-.bottomFooter{
+
+.bottomFooter {
     width: 90%;
     height: 50%;
     border-top: 1.5px solid #282938;
 }
-.ulFooter{
+
+.ulFooter {
     width: 50%;
     display: flex;
     gap: 3%;
@@ -301,7 +316,8 @@ li a {
     justify-content: flex-start;
     margin-left: 5%;
 }
-.social{
+
+.social {
     width: 50%;
     gap: 3%;
     display: flex;
@@ -312,12 +328,14 @@ li a {
 
 /* Estilos gerais para mobile */
 @media (max-width: 768px) {
+
     /* Header */
     header {
         height: auto;
         padding: 10px;
         flex-direction: column;
-      
+        top: 0%;
+        z-index: 1000;
     }
 
     .divIMG {
@@ -328,7 +346,7 @@ li a {
     }
 
     #logo {
-        width: 20%;
+        width: 12%;
     }
 
     ul {
@@ -336,11 +354,13 @@ li a {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        display: none; /* Esconde o menu por padrão */
+        display: none;
+        /* Esconde o menu por padrão */
     }
 
     ul.active {
-        display: flex; /* Mostra o menu quando ativo */
+        display: flex;
+        /* Mostra o menu quando ativo */
     }
 
     .elementsList {
@@ -448,7 +468,7 @@ li a {
         justify-content: center;
         flex-direction: column;
         gap: 15%;
-        
+
     }
 
     #textAbout h2 {
@@ -506,6 +526,7 @@ li a {
         width: 90%;
         height: auto;
         position: relative;
+        margin: 2%;
     }
 
     .textProject {
@@ -514,7 +535,7 @@ li a {
 
     /* Footer */
     #Footer {
-        margin-top: 80vh;
+        margin-top: 120vh;
         height: auto;
         padding: 20px;
     }
@@ -542,3 +563,110 @@ li a {
 }
 
 /*-----------SCRIPT------------*/
+
+@keyframes mover {
+    0%{
+        transform: translateY(0px);
+    }50%{
+        transform: translateY(30px);
+    }100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Estilos do Pop-up */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #5E3BEE;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.popup-content input,
+.popup-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.popup-content textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.popup-content button[type="submit"] {
+    background-color: #5E3BEE;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button[type="submit"]:hover {
+    background-color: #4a2fbb;
+}
+
+.close-btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #bbb;
+}

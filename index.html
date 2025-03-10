@@ -11,16 +11,25 @@
 
 <body>
 
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <h2>Entre em Contato</h2>
+            <p>Preencha o formulário abaixo para entrar em contato comigo.</p>
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea placeholder="Sua mensagem" required></textarea>
+            </form>
+            <button type="submit">Enviar</button>
+            <button class="close-btn" id="closeBtn">Fechar</button>
+        </div>
+    </div>
+
     <header>
         <div class="divIMG">
             <img id="logo" src="./assets/imgs/_.png" alt="Logo">
         </div>
-        <div class="menu-icon" id="menuIcon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul>
+        <ul class="nav-links" id="navLinks">
             <div class="elementsList">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -48,7 +57,7 @@
             </div>
         </div>
         <div id="imgHero">
-            <img width="80%" src="./assets/imgs/undraw_static-assets_di5m 1.png" alt="" srcset="">
+            <img id="heroIMG" width="80%" src="./assets/imgs/undraw_static-assets_di5m 1.png" alt="" srcset="">
         </div>
 
     </main>
@@ -94,7 +103,7 @@
 
     <section data-aos="fade-up" id="aboutMe">
         <div class="aboutMeBox">
-            <img style="border-radius: 20px;" width="40%" src="./assets/imgs/eu.jpg" alt="" srcset="">
+            <img style="border-radius: 20%;" width="40%" src="./assets/imgs/eu.jpg" alt="" srcset="">
         </div>
         <div id="textAbout" class="aboutMeBox">
 
@@ -126,8 +135,10 @@
                 </div>
                 <div class="textProject">
                     <h2>Game (pedra, papel e tesoura)</h2>
-                    <p>Desenvolvi um jogo interativo de Pedra, Papel e Tesoura. Com um design simples e divertido, o jogo permite que os usuários compitam contra o computador.</p>
-                    <button><a target="_blank" href="https://github.com/Cristianroque/projectGAME">View In Github</a></button>
+                    <p>Desenvolvi um jogo interativo de Pedra, Papel e Tesoura. Com um design simples e divertido, o
+                        jogo permite que os usuários compitam contra o computador.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/projectGAME">View In
+                            Github</a></button>
                 </div>
             </div>
             <div class="ProjectsItem">
@@ -136,8 +147,10 @@
                 </div>
                 <div class="textProject">
                     <h2>Calculadora</h2>
-                    <p>Desenvolvi uma calculadora funcional utilizando HTML, CSS e JavaScript, com design moderno e responsivo, capaz de realizar operações básicas de forma eficiente.</p>
-                    <button><a target="_blank" href="https://github.com/Cristianroque/MyCalculator">View In Github</a></button>
+                    <p>Desenvolvi uma calculadora funcional utilizando HTML, CSS e JavaScript, com design moderno e
+                        responsivo, capaz de realizar operações básicas de forma eficiente.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/MyCalculator">View In
+                            Github</a></button>
                 </div>
             </div>
             <div class="ProjectsItem">
@@ -146,8 +159,10 @@
                 </div>
                 <div class="textProject">
                     <h2>Site de hospedagem</h2>
-                    <p> Criei uma plataforma de hospedagem online, focada em usabilidade e design intuitivo, para ajudar usuários a encontrar e reservar acomodações com facilidade.</p>
-                    <button><a target="_blank" href="https://github.com/Cristianroque/PROJETO-INTEGRADOR">View In Github</a></button>
+                    <p> Criei uma plataforma de hospedagem online, focada em usabilidade e design intuitivo, para ajudar
+                        usuários a encontrar e reservar acomodações com facilidade.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/PROJETO-INTEGRADOR">View In
+                            Github</a></button>
                 </div>
             </div>
 
@@ -158,10 +173,10 @@
 
         <div class="topFooter">
             <ul class="ulFooter">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#aboutMe">Sobre mim</a></li>
-                    <li><a href="#project">Projetos</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#aboutMe">Sobre mim</a></li>
+                <li><a href="#project">Projetos</a></li>
             </ul>
             <div class="social">
                 <a href="#"><img width="15px" src="./assets/imgs/face.png" alt="" srcset=""></a>
@@ -182,4 +197,5 @@
         AOS.init();
     </script>
 </body>
+
 </html>

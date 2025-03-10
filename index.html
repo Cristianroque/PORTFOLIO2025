@@ -6,30 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="./assets/style/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
         <div class="divIMG">
-            <img id="logo" src="./assets/imgs/_.png" alt="" srcset="">
+            <img id="logo" src="./assets/imgs/_.png" alt="Logo">
+        </div>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul>
             <div class="elementsList">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Projetos</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#aboutMe">Sobre mim</a></li>
+                <li><a href="#project">Projetos</a></li>
             </div>
-
             <div class="boxBTN">
                 <button id="btnHeader">Contato</button>
             </div>
-
         </ul>
     </header>
 
-    <main class="heroPage">
+    <main id="hero" class="heroPage">
 
         <div id="textHero">
             <div class="textHeroBox">
@@ -49,7 +53,7 @@
 
     </main>
 
-    <section class="Skills">
+    <section data-aos="fade-up" id="skills" class="Skills">
 
         <div class="TitleSkills">
             <h2>Skills</h2>
@@ -88,9 +92,9 @@
 
     </section>
 
-    <section id="aboutMe">
+    <section data-aos="fade-up" id="aboutMe">
         <div class="aboutMeBox">
-            <img width="50%" src="./assets/imgs/About Me.png" alt="" srcset="">
+            <img style="border-radius: 20px;" width="40%" src="./assets/imgs/eu.jpg" alt="" srcset="">
         </div>
         <div id="textAbout" class="aboutMeBox">
 
@@ -110,47 +114,72 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section data-aos="fade-up" id="project" class="projects">
         <div class="TitleProjects">
             <h2>Projetos</h2>
         </div>
         <div class="boxProject">
 
             <div class="ProjectsItem">
-                <div class="imgProject">
-
+                <div id="img1Project" class="imgProject">
+                    <img src="./assets/imgs/pedraPapelTesouro.png" alt="" srcset="">
                 </div>
                 <div class="textProject">
-                    <h2>Site para róbotica</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button>View In Github </button>
+                    <h2>Game (pedra, papel e tesoura)</h2>
+                    <p>Desenvolvi um jogo interativo de Pedra, Papel e Tesoura. Com um design simples e divertido, o jogo permite que os usuários compitam contra o computador.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/projectGAME">View In Github</a></button>
                 </div>
             </div>
             <div class="ProjectsItem">
                 <div class="imgProject">
-
+                    <img src="./assets/imgs/calculator.png" alt="" srcset="">
                 </div>
                 <div class="textProject">
-                    <h2>Site para róbotica</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button>View In Github </button>
+                    <h2>Calculadora</h2>
+                    <p>Desenvolvi uma calculadora funcional utilizando HTML, CSS e JavaScript, com design moderno e responsivo, capaz de realizar operações básicas de forma eficiente.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/MyCalculator">View In Github</a></button>
                 </div>
             </div>
             <div class="ProjectsItem">
                 <div class="imgProject">
-
+                    <img src="./assets/imgs/hospedagem.png" alt="" srcset="">
                 </div>
                 <div class="textProject">
-                    <h2>Site para róbotica</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                    <button>View In Github </button>
+                    <h2>Site de hospedagem</h2>
+                    <p> Criei uma plataforma de hospedagem online, focada em usabilidade e design intuitivo, para ajudar usuários a encontrar e reservar acomodações com facilidade.</p>
+                    <button><a target="_blank" href="https://github.com/Cristianroque/PROJETO-INTEGRADOR">View In Github</a></button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <script src="./assets/script/script.js"></script>
-</body>
+    <footer id="Footer">
 
+        <div class="topFooter">
+            <ul class="ulFooter">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#aboutMe">Sobre mim</a></li>
+                    <li><a href="#project">Projetos</a></li>
+            </ul>
+            <div class="social">
+                <a href="#"><img width="15px" src="./assets/imgs/face.png" alt="" srcset=""></a>
+                <a href="#"><img width="25px" src="./assets/imgs/insta.png" alt="" srcset=""></a>
+                <a href="#"><img width="25px" src="./assets/imgs/LinkedIn.png" alt="" srcset=""></a>
+            </div>
+        </div>
+
+        <div class="bottomFooter">
+            <p style="margin: 1%;">© 2025 Cristian. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="./assets/script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
 </html>

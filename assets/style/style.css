@@ -183,8 +183,10 @@ li a {
 
 #aboutMe {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .aboutMeBox {
@@ -193,6 +195,7 @@ li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
 }
 
 #textAbout {
@@ -209,6 +212,10 @@ li a {
 
 #textAbout p {
     width: 60%;
+}
+
+.elementsList a:hover{
+    color: #5E3BEE;
 }
 
 .projects {
